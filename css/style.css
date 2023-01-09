@@ -1,59 +1,454 @@
-@font-face {
-    font-family: 'Sunday';
-	src: url('../fonts/sunday.eot'); /* IE 9 Compatibility Mode */
-	src: url('../fonts/sunday.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
-		url('../fonts/sunday.woff2') format('woff2'), /* Super Modern Browsers */
-		url('../fonts/sunday.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
-		url('../fonts/sunday.ttf') format('truetype'), /* Safari, Android, iOS */
-		url('../fonts/sunday.svg#sunday') format('svg'); /* Chrome < 4, Legacy iOS */
+/* Обнуление */
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+	/* Обнуление своства box-sizing: border-box; при явном указании параметров widht и hight  совместно с padding не суммирует значение padding Пример widht:500px;
+	padding: 20px; при обнулении будет равняться 500px без обнуления 520px */
 }
 
-body{
-    background: url(../img/background/6380494.jpg) 0 0 / 100% repeat;
-    
+a {
+	text-decoration: none;
 }
-.header{
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid;
-    min-height: 77px;
-    font-family: 'Sunday';
-    font-size: 30px;
-    
-    
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+html,
+body {
+	height: 100%;
+	line-height: 1;
+	background: #f2f2f2;
+	font-size: 14px;
+	color: black;
+	font-weight: 500;
+	font-family: 'SFNS Display Bold';
+}
+
+/*--------------------*/
+
+
+@font-face {
+	font-family: 'Sunday';
+	src: url('../fonts/sunday.eot');
+	/* IE 9 Compatibility Mode */
+	src: url('../fonts/sunday.eot?#iefix') format('embedded-opentype'),
+		/* IE < 9 */
+		url('../fonts/sunday.woff2') format('woff2'),
+		/* Super Modern Browsers */
+		url('../fonts/sunday.woff') format('woff'),
+		/* Firefox >= 3.6, any other modern browser */
+		url('../fonts/sunday.ttf') format('truetype'),
+		/* Safari, Android, iOS */
+		url('../fonts/sunday.svg#sunday') format('svg');
+	/* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'SFNS Display Bold';
+	src: url('../fonts/sfns_display_bold.eot');
+	/* IE 9 Compatibility Mode */
+	src: url('../fonts/sfns_display_bold.eot?#iefix') format('embedded-opentype'),
+		/* IE < 9 */
+		url('../fonts/sfns_display_bold.woff2') format('woff2'),
+		/* Super Modern Browsers */
+		url('../fonts/sfns_display_bold.woff') format('woff'),
+		/* Firefox >= 3.6, any other modern browser */
+		url('../fonts/sfns_display_bold.ttf') format('truetype'),
+		/* Safari, Android, iOS */
+		url('../fonts/sfns_display_bold.svg#sfns_display_bold') format('svg');
+	/* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'SFNS Display Thin';
+	src: url('../fonts/sfns_display_thin.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/sfns_display_thin.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/sfns_display_thin.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/sfns_display_thin.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/sfns_display_thin.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/sfns_display_thin.svg#sfns_display_thin') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+/* --------------------------WRAPPER---------------------- */
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+._container {
+	max-width: 1170px;
+	margin: 0px auto;
+	padding: 0px 15px;
+	box-sizing: content-box;
+}
+
+._ibg {
+	position: relative;
+}
+
+._ibg img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+}
+
+/* --------------------------------------------------------- */
+.header {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 50;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+.header__container {
+	position: relative;
+	display: flex;
+	min-height: 70px;
+	justify-content: space-around;
+	align-items: center;
+	font-family: 'Sunday';
+	z-index: 51;
+}
+
+.header__logo {
+	font-size: 24px;
+	font-weight: 600;
+	letter-spacing: 0.2px;
+	line-height: 150%;
 }
 
 .header__menu {
-    display: flex;
-    justify-content: space-between;
-    min-width: 700px;
+	display: flex;
+	margin: 0px 0px 0px 20px;
 }
 
-.header__menu__navigation a{
-    font-size: 15px;
-    color: black;
+.menu {
+	padding: 5px 0px;
 }
 
-.top_pic {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    color: white;
-    background: url(../img/selective-focus-shot-of-a-piano.jpg) center / cover;
-    min-height: 508px;
+.menu__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
 
-    
+.menu__item {}
+
+@media (min-width: 524px) {
+	.menu__item:not(:last-child) {
+		margin: 0px 21px 0px 0px;
+	}
 }
-.text_block_one {
+
+@media (max-width: 524px) {
+	.menu__item {
+		margin: 0px 0px 0px 10px;
+	}
 }
-.mini_pic1 img{
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
+
+.menu__link {
+	color: black;
+	line-height: 150%;
+
 }
+
+@media (max-width: 480px) {
+	.menu__link {
+		font-size: 18px;
+	}
+}
+
+/* ------------PAGE------------------ */
+.page {
+	flex: 1 1 auto;
+}
+
+.page__main-block {}
+
+.main-block {
+	position: relative;
+
+}
+
+.main-block__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.main-block__body {
+	padding: 200px 0px 80px 0px;
+	position: relative;
+	z-index: 2;
+	color: #ffff;
+	text-shadow: 0 0 25px #000;
+	text-align: center;
+}
+
+@media (max-width: px) {}
+
+.main-block__title {
+	font-size: 32px;
+	font-weight: 700;
+	margin: 0px 0px 20px 0px;
+}
+
+.main-block__text {
+	font-size: 18px;
+	letter-spacing: 0.3px;
+	margin: 0px 0px 20px 0px;
+
+}
+
+.main-block__buttons {
+	display: flex;
+	justify-content: center;
+}
+
+.main-block__button {
+	text-decoration: none;
+	display: inline-block;
+	letter-spacing: 2px;
+	font-size: 20px;
+	color: inherit;
+	/* background-color: #92CD4C; */
+	margin: 20px 0px 0px 0px;
+	padding: 15px 30px;
+	border-radius: 5px;
+	font-weight: 600;
+	position: relative;
+}
+.button1{
+	background-color: #92CD4C;
+    box-shadow: 5px 5px 3px;
+	transition-duration: 300ms;
+	/* transition-property: background-color; */
+	transition-timing-function: ease-in;
+}
+
+.button1:hover{
+	top: 2px;
+	background-color: #417501;
+    box-shadow: 3px 3px 3px;
+}
+.main-block__image {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #000;
+}
+
+.main-block__image img {
+	opacity: 0.8;
+}
+
+/* ----------UNLOCK------------------- */
+.page__unlock {}
+
+.unlock {}
+
+.unlock__container {}
+
+.unlock__body {}
+
+.block {
+	display: flex;
+	padding: 20px 0px;
+
+	/* align-items: center; */
+}
+
+.unlock__row {
+	
+	
+}
+
+.row {
+	margin: 30px 0px;
+	padding: 0px -15px;
+
+}
+
+.row__title {
+	font-size: 25px;
+	line-height: 160%;
+}
+
+.row__text {
+	line-height: 142%;
+	font-family: 'SFNS Display Thin';
+}
+
+.unlock__img {
+}
+.image img{
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	border: 4px solid #c4c4c4;
+}
+.image{
+	margin: 0px 15px;
+	display: flex;
+	align-items: center;
+}
+
+
+
+/* ----------EXPRESS------------------- */
+
+.page__express {
+	color: #ffff;
+	background: #312F45;
+}
+.express {
+
+}
+.express__container {
+
+}
+
+.express__body {
+	flex-direction: row-reverse;
+}
+.block {
+}
+.express__row {
+}
+.row {
+}
+.row__title {
+
+}
+.row__text {
+}
+
+@media (max-width: 720px) {
+	.image {
+		display: none;
+	}
+
+	.row {
+		margin: 10px 20px;
+	}
+
+	.row__title {
+		line-height: 120%;
+		margin-bottom: 10px;
+	}
+}
+
+/* .header__navigation a {
+	font-size: 15px;
+	color: black;
+}
+
+.top__pic {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	background: url(../img/selective-focus-shot-of-a-piano.jpg) center / cover;
+
+	min-height: 508px;
+
+}
+
+.top__pic h1 {
+	font-size: 30px;
+	font-weight: 700;
+}
+
+.top__pic p {
+	font-size: 18px;
+	padding: 30px;
+}
+
+.top__pic span {
+	padding: 10px;
+	font-size: 15px;
+	background: rgba(27, 74, 245, 0.56);
+	border-radius: 10px;
+	box-shadow: 0 0 15px;
+}
+
+.top__pic--text {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 70px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 10px;
+	background: rgba(221, 221, 221, 0.5)
+}
+
+.block__one {
+	padding: 50px;
+	background: rgba(221, 221, 221, 0.9);
+	min-height: 300px;
+
+}
+
+.block__one--text {
+	display: flex;
+	padding: 10px 0px 0px 0px;
+	max-width: 1000px;
+	margin: 0px auto;
+	}
+
+.block__one--text p {
+	display: flex;
+	align-content: flex-end;
+	flex-direction: column;
+	font-size: 18px;
+	/* border: 1px solid; 
+}
+
+.block__one--text span {
+	text-align: center;
+	font-weight: 700;
+	padding: 10px 0px 0px 0px;
+}
+
+.block__one--pic img {
+	border-radius: 50%;
+	width: 250px;
+	height: 250px;
+	box-shadow: 0 0 10px;
+}
+
 /* .block {
     height: 500px;
     border-radius: 50px;
