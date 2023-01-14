@@ -82,12 +82,18 @@ body {
 
 @font-face {
 	font-family: 'SFNS Display Thin';
-	src: url('../fonts/sfns_display_thin.eot'); /* IE 9 Compatibility Mode */
-	src: url('../fonts/sfns_display_thin.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
-		url('../fonts/sfns_display_thin.woff2') format('woff2'), /* Super Modern Browsers */
-		url('../fonts/sfns_display_thin.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
-		url('../fonts/sfns_display_thin.ttf') format('truetype'), /* Safari, Android, iOS */
-		url('../fonts/sfns_display_thin.svg#sfns_display_thin') format('svg'); /* Chrome < 4, Legacy iOS */
+	src: url('../fonts/sfns_display_thin.eot');
+	/* IE 9 Compatibility Mode */
+	src: url('../fonts/sfns_display_thin.eot?#iefix') format('embedded-opentype'),
+		/* IE < 9 */
+		url('../fonts/sfns_display_thin.woff2') format('woff2'),
+		/* Super Modern Browsers */
+		url('../fonts/sfns_display_thin.woff') format('woff'),
+		/* Firefox >= 3.6, any other modern browser */
+		url('../fonts/sfns_display_thin.ttf') format('truetype'),
+		/* Safari, Android, iOS */
+		url('../fonts/sfns_display_thin.svg#sfns_display_thin') format('svg');
+	/* Chrome < 4, Legacy iOS */
 }
 
 /* --------------------------WRAPPER---------------------- */
@@ -206,7 +212,8 @@ body {
 }
 
 .main-block__body {
-	padding: 200px 0px 80px 0px;
+	border: 1px solid;
+	padding: 250px 0px 80px 0px;
 	position: relative;
 	z-index: 2;
 	color: #ffff;
@@ -247,19 +254,21 @@ body {
 	font-weight: 600;
 	position: relative;
 }
-.button1{
+
+.button1 {
 	background-color: #92CD4C;
-    box-shadow: 5px 5px 3px;
+	box-shadow: 5px 5px 3px;
 	transition-duration: 300ms;
 	/* transition-property: background-color; */
 	transition-timing-function: ease-in;
 }
 
-.button1:hover{
+.button1:hover {
 	top: 2px;
 	background-color: #417501;
-    box-shadow: 3px 3px 3px;
+	box-shadow: 3px 3px 3px;
 }
+
 .main-block__image {
 	position: absolute;
 	width: 100%;
@@ -285,14 +294,10 @@ body {
 .block {
 	display: flex;
 	padding: 20px 0px;
-
 	/* align-items: center; */
 }
 
-.unlock__row {
-	
-	
-}
+.unlock__row {}
 
 .row {
 	margin: 30px 0px;
@@ -310,21 +315,20 @@ body {
 	font-family: 'SFNS Display Thin';
 }
 
-.unlock__img {
-}
-.image img{
+.unlock__img {}
+
+.image img {
 	width: 250px;
 	height: 250px;
 	border-radius: 50%;
 	border: 4px solid #c4c4c4;
 }
-.image{
+
+.image {
 	margin: 0px 15px;
 	display: flex;
 	align-items: center;
 }
-
-
 
 /* ----------EXPRESS------------------- */
 
@@ -332,27 +336,24 @@ body {
 	color: #ffff;
 	background: #312F45;
 }
-.express {
 
-}
-.express__container {
+.express {}
 
-}
+.express__container {}
 
 .express__body {
 	flex-direction: row-reverse;
 }
-.block {
-}
-.express__row {
-}
-.row {
-}
-.row__title {
 
-}
-.row__text {
-}
+.block {}
+
+.express__row {}
+
+.row {}
+
+.row__title {}
+
+.row__text {}
 
 @media (max-width: 720px) {
 	.image {
@@ -368,6 +369,99 @@ body {
 		margin-bottom: 10px;
 	}
 }
+
+/* ----------CLASSES------------------- */
+
+.page__classes {}
+
+.classes__container {
+
+}
+
+.classes__header {
+	font-size: 24px;
+	margin: 50px 0px;
+}
+
+.classes__body {
+	font-family: 'SFNS Display Thin';
+	margin: 0px -15px;
+}
+
+.classes__row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0px 15px;
+	justify-content: space-between;
+}
+
+.classes__row:not(:last-child) {
+	margin: 0px 0px 10px 0px;
+}
+@media (max-width: 1050px){
+	.classes__row:not(:last-child){
+		margin: 0px 0px 0px 0px;
+	}
+}
+.classes__item {
+	padding: 10px;
+	flex: 0 1 23%;
+	background-color: #ffff;
+	border-bottom: 4px solid rgb(147, 153, 167);
+}
+
+.classes__item:not(:last-child){
+	margin-right: 5px;
+}
+@media (max-width: 1050px){
+    .classes__item {
+        flex: 0 1 47%;
+        margin: 0px 0px 10px 0px
+    }
+    .classes__item:not(:last-child){
+        margin-right: 0px;
+    }
+	.classes__row{
+		justify-content: space-around;
+	}	
+}
+
+@media (max-width: 500px){
+	.classes__item{
+		flex: 0 1 100%;
+	}
+	.classes__header {
+		margin: 20px 0px;
+	}
+
+}
+.classes__link {
+	color: inherit;
+	text-transform: uppercase;
+
+}
+
+.classes__image {
+	margin: 0px 0px 20px 0px;
+	padding: 0px 0px 60% 0px;
+	display: block;
+}
+
+.classes__content {
+	
+}
+
+.classes__title {
+	margin: 0px 0px 20px 0px;
+
+}
+
+.classes__subtitle {
+	margin: 0px 0px 20px 0px;
+	font-size: 30px;
+}
+
+.classes__text {}
 
 /* .header__navigation a {
 	font-size: 15px;
