@@ -450,7 +450,8 @@ body {
 		justify-content: space-around;
 		margin: 0px 0px 0px 0px;
 	}
-	.classes__subtitle{
+
+	.classes__subtitle {
 		font-size: 25px;
 	}
 }
@@ -464,6 +465,7 @@ body {
 .footer {
 	background: #312F45;
 }
+
 .footer__top {
 	color: #f2f2f2;
 	/* padding: 20px 0px; */
@@ -474,41 +476,48 @@ body {
 	display: flex;
 	justify-content: space-around;
 }
+
 .footer__column {
 	flex: 0 1 25%;
 	min-width: 200px;
 	padding: 15px 0px;
 }
+
 .footer__title {
 	margin: 0px 0px 10px 0px;
 	font-size: 18px;
 	text-transform: uppercase;
 }
-.footer__text {
-}
-.footer__contacts {
-	
-}
+
+.footer__text {}
+
+.footer__contacts {}
+
 .contacts-footer__item {
 	padding: 0px 0px 0px 34px;
-	display: block;
+	display: flex;
+	align-items: center;
 	line-height: 142%;
-	min-height: 40px;
+	min-height: 30px;
 	color: #f2f2f2;
 }
+
 .contacts-footer__item_map {
-	background: url(/img/footer/icons/02.svg) 0 0  no-repeat;
+	background: url(/img/footer/icons/02.svg) 0 0 no-repeat;
 }
+
 .contacts-footer__item_phone {
-	background: url(/img/footer/icons/01.svg) 0 0  no-repeat;
+	background: url(/img/footer/icons/01.svg) 0 0 no-repeat;
 }
+
 .contacts-footer__item_email {
-	background: url(/img/footer/icons/03.svg) 0 0  no-repeat;
+	background: url(/img/footer/icons/03.svg) 0 0 no-repeat;
 }
 
 .footer__bottom {
 	background-color: #92CD4C;
 }
+
 .footer__container {
 	display: flex;
 	justify-content: space-around;
@@ -516,23 +525,23 @@ body {
 	flex-wrap: wrap;
 }
 
-.footer__copy{
+.footer__copy {
 	color: #f2f2f2;
 	line-height: 170%;
 }
 
-.footer__social{
+.footer__social {
+	margin: 10px 10px;
+	
 	display: flex;
 	align-items: center;
 }
 
-.footer__social img{
-	width: 35px;
-	margin: 7px 10px;
+.footer__social img {
 }
 
-.link__social {
-}
+.link__social {}
+
 @media (max-width: 500px) {
 	.classes__item {
 		flex: 0 1 100%;
@@ -541,10 +550,11 @@ body {
 	.classes__header {
 		margin: 20px 0px;
 	}
+
 	.footer__row {
-	flex-direction: column;
-	justify-content: start;
-	margin: 0px 20px;
-	
+		flex-direction: column;
+		justify-content: start;
+		margin: 0px 20px;
+
 	}
 }
