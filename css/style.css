@@ -439,7 +439,7 @@ body {
 @media (max-width: 1050px) {
 	.classes__item {
 		flex: 0 1 47%;
-		margin: 0px 0px 10px 0px
+		margin: 0px 0px 5px 0px
 	}
 
 	.classes__item:not(:last-child) {
@@ -473,7 +473,6 @@ body {
 .footer__row {
 	display: flex;
 	justify-content: space-around;
-	flex-wrap: wrap;
 }
 .footer__column {
 	flex: 0 1 25%;
@@ -492,7 +491,7 @@ body {
 }
 .contacts-footer__item {
 	padding: 0px 0px 0px 34px;
-	display: inline-block;
+	display: block;
 	line-height: 142%;
 	min-height: 40px;
 	color: #f2f2f2;
@@ -542,5 +541,10 @@ body {
 	.classes__header {
 		margin: 20px 0px;
 	}
-
+	.footer__row {
+	flex-direction: column;
+	justify-content: start;
+	margin: 0px 20px;
+	
+	}
 }
