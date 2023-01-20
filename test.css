@@ -1,0 +1,148 @@
+/* Обнуление */
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+	/* Обнуление своства box-sizing: border-box; при явном указании параметров widht и hight  совместно с padding не суммирует значение padding Пример widht:500px;
+	padding: 20px; при обнулении будет равняться 500px без обнуления 520px */
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+html,
+body {
+	height: 100%;
+	line-height: 1;
+	background: #f2f2f2;
+	font-size: 14px;
+	color: black;
+	font-weight: 500;
+	font-family: 'SFNS Display Bold';
+}
+
+/*--------------------*/
+
+
+@font-face {
+	font-family: 'Sunday';
+	src: url('../fonts/sunday.eot');
+	/* IE 9 Compatibility Mode */
+	src: url('../fonts/sunday.eot?#iefix') format('embedded-opentype'),
+		/* IE < 9 */
+		url('../fonts/sunday.woff2') format('woff2'),
+		/* Super Modern Browsers */
+		url('../fonts/sunday.woff') format('woff'),
+		/* Firefox >= 3.6, any other modern browser */
+		url('../fonts/sunday.ttf') format('truetype'),
+		/* Safari, Android, iOS */
+		url('../fonts/sunday.svg#sunday') format('svg');
+	/* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'SFNS Display Bold';
+	src: url('../fonts/sfns_display_bold.eot');
+	/* IE 9 Compatibility Mode */
+	src: url('../fonts/sfns_display_bold.eot?#iefix') format('embedded-opentype'),
+		/* IE < 9 */
+		url('../fonts/sfns_display_bold.woff2') format('woff2'),
+		/* Super Modern Browsers */
+		url('../fonts/sfns_display_bold.woff') format('woff'),
+		/* Firefox >= 3.6, any other modern browser */
+		url('../fonts/sfns_display_bold.ttf') format('truetype'),
+		/* Safari, Android, iOS */
+		url('../fonts/sfns_display_bold.svg#sfns_display_bold') format('svg');
+	/* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'SFNS Display Thin';
+	src: url('../fonts/sfns_display_thin.eot');
+	/* IE 9 Compatibility Mode */
+	src: url('../fonts/sfns_display_thin.eot?#iefix') format('embedded-opentype'),
+		/* IE < 9 */
+		url('../fonts/sfns_display_thin.woff2') format('woff2'),
+		/* Super Modern Browsers */
+		url('../fonts/sfns_display_thin.woff') format('woff'),
+		/* Firefox >= 3.6, any other modern browser */
+		url('../fonts/sfns_display_thin.ttf') format('truetype'),
+		/* Safari, Android, iOS */
+		url('../fonts/sfns_display_thin.svg#sfns_display_thin') format('svg');
+	/* Chrome < 4, Legacy iOS */
+}
+
+/* --------------------------WRAPPER---------------------- */
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+._container {
+	max-width: 1170px;
+	margin: 0px auto;
+	padding: 0px 15px;
+	box-sizing: content-box;
+}
+
+/* ._ibg {
+	position: relative;
+}
+
+._ibg img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+} */
+
+
+.header {
+}
+
+.header__container {
+
+	display: flex;
+	justify-content: space-between;
+}
+
+.header__logo {
+}
+.header__menu {
+	display: flex;
+}
+.menu__list {
+}
+.menu__item {
+}
+.menu__link {
+}
