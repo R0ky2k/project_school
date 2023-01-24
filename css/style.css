@@ -135,6 +135,16 @@ body {
 	background-color: rgba(255, 255, 255, 0.5);
 }
 
+.header::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255);
+	z-index: 2;
+}
 .header__container {
 	position: relative;
 	display: flex;
@@ -142,48 +152,118 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	font-family: 'Sunday';
-	/* z-index: 0; */
+	
 }
 
+
 .header__logo {
+
 	text-align: center;
 	font-size: 24px;
 	font-weight: 600;
 	letter-spacing: 0.2px;
 	line-height: 150%;
+	position: relative;
+	z-index: 3;
 }
 
+.header__burger{
+	display: none;
+}
 .header__menu {
 
 	display: flex;
-	margin: 0px 0px 0px 20px;
+	/* margin: 0px 0px 0px 20px; */
 
 }
 
-
 .menu__list{
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	position: relative;
+	z-index: 2;
 }
 
 .menu__list li:not(:last-child){
 	margin: 0px 10px 0px 0px;
 }
-.menu__item:hover{
+/* .menu__item:hover{
 	border-bottom:1px solid;
-}
-
-@media (max-width: 514px) {
-	.menu__list li:nth-child(2){
-		margin: 0px 0px 0px 0px;
-	}
-} 
+} */
 
 .menu__link {
 	color: black;
 	line-height: 150%;
 }
+
+@media (max-width: 767.98px){
+	body.lock{
+		overflow: hidden;
+	}
+	.header__burger{
+	display: block;
+	width: 30px;
+	height: 20px;
+	position: relative;
+	z-index: 3;
+	}
+	.header__burger span{
+		background: #000;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		top: 9px;
+	}
+	.header__burger::before,
+	.header__burger::after{
+		content: '';
+		background: #000;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		transition: all 0.3s ease 0s;
+	}
+	.header__burger::before{
+		top: 0;
+	}
+	.header__burger::after{
+		bottom: 0;
+	}
+	.header__burger.active span{
+		transform: scale(0);
+	}
+	.header__burger.active::before{
+		transform: rotate(45deg);
+		top: 9px;
+	}
+	.header__burger.active::after{
+		transform: rotate(-45deg);
+		bottom: 9px;
+	}
+	.header__menu{
+		position: fixed;
+		top: -100%;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		transition: all 0.3s ease 0s;
+		background: rgb(161, 58, 58);
+		padding: 80px 10px 20px 10px;
+	}
+	.header__menu.active{
+		top: 0;
+	}
+	.menu__list{
+		display: block;
+	}
+	.menu__list li:not(:last-child){
+		margin: 0px 0px 20px 0px;
+	}
+
+}
+
 
 
 /* ------------PAGE------------------ */
